@@ -49,6 +49,10 @@ if __name__ == "__main__":
         from eval.api_runner import run_api_eval
 
         run_api_eval(args)
+    elif args.model_type == "qianfan":
+        from eval.qianfan_runner import run_qianfan_eval
+
+        run_qianfan_eval(args)
     else:
         raise ValueError(
             f"Invalid model type: {args.model_type}. Model type must be one of: 'oa', 'hf'"
